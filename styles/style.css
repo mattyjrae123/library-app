@@ -64,6 +64,10 @@ h1 {
   color: var(--colour-dark);
 }
 
+#add-btn-container > button:active {
+  color: var(--colour-medium);
+}
+
 footer {
   background-color: var(--colour-medium);
   padding: 5px 0;
