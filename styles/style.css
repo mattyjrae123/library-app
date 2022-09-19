@@ -51,6 +51,10 @@ h1 {
 footer {
   background-color: var(--colour-medium);
   padding: 5px 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 footer > span {
