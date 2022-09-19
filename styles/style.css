@@ -34,6 +34,11 @@ body {
 
 header {
   background-color: var(--colour-dark);
+  padding: 15px 0;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 footer {
