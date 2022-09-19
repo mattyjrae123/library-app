@@ -38,14 +38,14 @@ body {
 
 header {
   background-color: var(--colour-dark);
-  padding: 20px 0;
+  padding: 10px 0;
 
   display: grid;
   justify-items: center;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 44px;
 }
 
 footer {
@@ -54,9 +54,9 @@ footer {
 
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 footer > span {
-  font-size: 32px;
+  font-size: 24px;
 }
