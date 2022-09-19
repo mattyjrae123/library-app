@@ -38,7 +38,10 @@ body {
 
 header {
   background-color: var(--colour-dark);
-  padding: 15px 0;
+  padding: 20px 0;
+
+  display: grid;
+  justify-items: center;
 }
 
 h1 {
