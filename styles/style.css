@@ -26,3 +26,11 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
+
+header {
+  background-color: #78350f;
+}
+
+footer {
+  background-color: #b45309;
+}
