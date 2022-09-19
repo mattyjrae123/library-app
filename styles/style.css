@@ -3,6 +3,9 @@
 
 html {
   box-sizing: border-box;
+  --colour-light: #fffbeb;
+  --colour-medium: #b45309;
+  --colour-dark: #78350f;
 }
 
 *, *:before, *:after {
@@ -26,13 +29,13 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 
-  background-color: #fffbeb;
+  background-color: var(--colour-light);
 }
 
 header {
-  background-color: #78350f;
+  background-color: var(--colour-dark);
 }
 
 footer {
-  background-color: #b45309;
+  background-color: var(--colour-medium);
 }
