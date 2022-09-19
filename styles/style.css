@@ -50,4 +50,9 @@ h1 {
 
 footer {
   background-color: var(--colour-medium);
+  padding: 5px 0;
+}
+
+footer > span {
+  font-size: 32px;
 }
