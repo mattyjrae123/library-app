@@ -1,11 +1,15 @@
 /* Remove default CSS styles */
 @import url(meyer-reset.css);
 
+/* Google Font: 'Open Sans' - 300, 400, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 html {
   box-sizing: border-box;
   --colour-light: #fffbeb;
   --colour-medium: #b45309;
   --colour-dark: #78350f;
+  font-family: 'Open Sans', sans-serif;
 }
 
 *, *:before, *:after {
