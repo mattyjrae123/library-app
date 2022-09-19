@@ -50,12 +50,16 @@ h1 {
 
 #add-btn-container > button {
   padding: 0;
-  margin: 15px 0 0 15px;
+  margin: 15px;
   background-color: inherit;
   border: none;
   font-size: 24px;
 
   color: var(--colour-medium);
+}
+
+#add-btn-container > button:hover {
+  color: var(--colour-dark);
 }
 
 footer {
