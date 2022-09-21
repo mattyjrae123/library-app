@@ -96,10 +96,34 @@ main {
 
 .title {
   font-size: 30px;
+  font-style: italic;
 }
 
 .author, .pages, .read-status {
   font-size: 20px;
+  margin-top: 20px;
+}
+
+.author {
+  margin-top: 5px;
+}
+
+.remove-btn {
+  margin-top: 40px;
+  font-size: 22px;
+  border: none;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: var(--colour-light);
+  padding: 5px 30px;
+  border-radius: 5px;
+}
+
+.remove-btn:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.remove-btn:active {
+  background-color: var(--colour-dark);
 }
 
 footer {
