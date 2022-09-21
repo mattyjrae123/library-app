@@ -78,7 +78,7 @@ main {
   overflow-y: scroll;
 }
 
-main > div {
+.book {
   height: 300px;
   color: var(--colour-light);
   background-color: var(--colour-dark);
@@ -87,6 +87,10 @@ main > div {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
               rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
 }
 
 footer {
