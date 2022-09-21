@@ -92,10 +92,18 @@ footer {
   padding: 5px 0;
 
   display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 footer > span {
   font-size: 24px;
+  width: 50%;
+}
+
+footer > span:first-of-type {
+  text-align: end;
+  margin-right: 20px;
+}
+
+footer > span:last-of-type {
+  margin-left: 20px;
 }
