@@ -54,7 +54,7 @@ h1 {
 
 #add-btn-container>button {
   padding: 0;
-  margin: 15px;
+  margin: 15px 0 0 15px;
   background-color: inherit;
   border: none;
   font-size: 24px;
@@ -73,11 +73,18 @@ h1 {
 main {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 20px;
+  padding: 15px 25px;
   overflow-y: scroll;
 }
 
 main > div {
   height: 300px;
+  color: var(--colour-light);
+  background-color: var(--colour-dark);
+  border-left: 7px solid var(--colour-medium);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 footer {
@@ -89,6 +96,6 @@ footer {
   gap: 20px;
 }
 
-footer>span {
+footer > span {
   font-size: 24px;
 }
