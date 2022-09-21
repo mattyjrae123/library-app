@@ -12,7 +12,9 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -50,7 +52,7 @@ h1 {
   color: var(--colour-light);
 }
 
-#add-btn-container > button {
+#add-btn-container>button {
   padding: 0;
   margin: 15px;
   background-color: inherit;
@@ -60,12 +62,22 @@ h1 {
   color: var(--colour-medium);
 }
 
-#add-btn-container > button:hover {
+#add-btn-container>button:hover {
   color: var(--colour-dark);
 }
 
-#add-btn-container > button:active {
+#add-btn-container>button:active {
   color: var(--colour-medium);
+}
+
+main {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  overflow-y: scroll;
+}
+
+main > div {
+  height: 300px;
 }
 
 footer {
@@ -77,6 +89,6 @@ footer {
   gap: 20px;
 }
 
-footer > span {
+footer>span {
   font-size: 24px;
 }
