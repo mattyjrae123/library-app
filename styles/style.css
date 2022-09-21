@@ -82,6 +82,7 @@ main {
   height: 300px;
   color: var(--colour-light);
   background-color: var(--colour-dark);
+
   border-left: 7px solid var(--colour-medium);
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -90,7 +91,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.author, .pages, .read-status {
+  font-size: 20px;
 }
 
 footer {
