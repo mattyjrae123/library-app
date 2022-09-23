@@ -27,3 +27,12 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
+
+function addBookToLibrary() {
+  let title = document.querySelector('input[name="title"]').value;
+  let author = document.querySelector('input[name="author"]').value;
+  let pages = document.querySelector('input[name="pages"]').value;
+  let read = document.querySelector('input[name="read"]').checked;
+
+  library.push(new Book(title, author, pages, read));
+}
