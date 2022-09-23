@@ -60,10 +60,12 @@ h1 {
   font-size: 24px;
 
   color: var(--colour-medium);
+  transition: transform 0.2s;
 }
 
 #add-btn-container>button:hover {
   color: var(--colour-dark);
+  transform: scale(1.02);
 }
 
 #add-btn-container>button:active {
@@ -173,8 +175,20 @@ form input:not(input[type="checkbox"]) {
 
 #add-book-btn {
   background-color: rgba(0, 255, 0, 0.7);
+  border: none;
+  transition: transform 0.2s;
+}
+
+#add-book-btn:hover {
+  transform: scale(1.02);
 }
 
 #close-btn {
   background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  transition: transform 0.2s;
+}
+
+#close-btn:hover {
+  transform: scale(1.02);
 }
