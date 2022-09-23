@@ -1,4 +1,5 @@
 "use strict";
+let library = [];
 
 const displayFormBtn = document.querySelector('#add-btn-container > button');
 const addBookBtn = document.querySelector('#add-book-btn');
@@ -20,15 +21,16 @@ addBookBtn.addEventListener('click', () => {
     return;
   }
 
-  library.push(new Book(title, author, pages));
   form.reset();
+  
+  library.push(new Book(title, author, pages));
+  const newDiv = generateBookHTML(title, author, pages, read);
+  document.querySelector('main').appendChild(newDiv);
 });
 
 formCloseBtn.addEventListener('click', () => {
   form.style.display = 'none';
 });
-
-let library = [];
 
 /**
  * Constructor for book objects that stores details of the book
@@ -62,4 +64,25 @@ function validInput(title, author, pages, read) {
   }
 
   return true;
+}
+
+function generateBookHTML(title, author, pages, read) {
+  const div = document.createElement('div');
+  div.classList.add('book');
+
+  if (read) {
+    div.innerHTML = `<h2 class="title">'${title}'</h2>
+                   <span class="author">By ${author}</span>
+                   <span class="pages">${pages} pages</span>
+                   <label class="read-status">Read <input type="checkbox" checked></label>
+                   <button class="remove-btn">Remove</button>`;
+  } else {
+    div.innerHTML = `<h2 class="title">'${title}'</h2>
+                   <span class="author">By ${author}</span>
+                   <span class="pages">${pages} pages</span>
+                   <label class="read-status">Read <input type="checkbox"></label>
+                   <button class="remove-btn">Remove</button>`;
+  }
+
+  return div;
 }
