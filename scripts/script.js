@@ -1,14 +1,14 @@
 "use strict";
 
 const addBookBtn = document.querySelector('#add-btn-container > button');
-const formCancelBtn = document.querySelector('#cancel-btn');
+const formCloseBtn = document.querySelector('#close-btn');
 const form = document.querySelector('form#add-book');
 
 addBookBtn.addEventListener('click', () => {
   form.style.display = 'flex';
 });
 
-formCancelBtn.addEventListener('click', () => {
+formCloseBtn.addEventListener('click', () => {
   form.style.display = 'none';
 });
 
