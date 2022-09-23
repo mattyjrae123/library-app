@@ -23,9 +23,10 @@ addBookBtn.addEventListener('click', () => {
 
   form.reset();
 
-  library.push(new Book(title, author, pages));
-  const newDiv = generateBookHTML(title, author, pages, read, library.length-1);
-  document.querySelector('main').appendChild(newDiv);
+  library.push(new Book(title, author, pages, read));
+
+  clearLibraryUI();
+  generateLibraryUI();
 });
 
 formCloseBtn.addEventListener('click', () => {
@@ -64,6 +65,29 @@ function validInput(title, author, pages, read) {
   }
 
   return true;
+}
+
+function clearLibraryUI() {
+  const main = document.querySelector('main');
+
+  while(main.lastChild) {
+    main.removeChild(main.lastChild);
+  }
+}
+
+function generateLibraryUI() {
+  const main = document.querySelector('main');
+  for (let i = 0; i < library.length; i+=1) {
+    const newBook = generateBookHTML(library[i].title,library[i].author, library[i].pages, library[i].read, i);
+    
+    newBook.querySelector('button').addEventListener('click', () => {
+      library.splice(i, 1);
+      clearLibraryUI();
+      generateLibraryUI();
+    });
+
+    main.appendChild(newBook);
+  }  
 }
 
 function generateBookHTML(title, author, pages, read, libraryIdx) {
