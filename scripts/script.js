@@ -1,12 +1,15 @@
 "use strict";
 
 const displayFormBtn = document.querySelector('#add-btn-container > button');
+const addBookBtn = document.querySelector('#add-book-btn');
 const formCloseBtn = document.querySelector('#close-btn');
 const form = document.querySelector('form#add-book');
 
 displayFormBtn.addEventListener('click', () => {
   form.style.display = 'flex';
 });
+
+addBookBtn.addEventListener('click', addBookToLibrary);
 
 formCloseBtn.addEventListener('click', () => {
   form.style.display = 'none';
