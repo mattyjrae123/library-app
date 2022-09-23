@@ -6,9 +6,9 @@
 
 html {
   box-sizing: border-box;
-  --colour-light: #fffbeb;
-  --colour-medium: #b45309;
-  --colour-dark: #78350f;
+  --colour-light: #f8fafc;
+  --colour-medium: #94a3b8;
+  --colour-dark: #334155;
   font-family: 'Open Sans', sans-serif;
 }
 
