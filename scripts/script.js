@@ -35,4 +35,5 @@ function addBookToLibrary() {
   let read = document.querySelector('input[name="read"]').checked;
 
   library.push(new Book(title, author, pages, read));
+  form.reset();
 }
