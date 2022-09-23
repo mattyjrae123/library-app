@@ -22,9 +22,9 @@ addBookBtn.addEventListener('click', () => {
   }
 
   form.reset();
-  
+
   library.push(new Book(title, author, pages));
-  const newDiv = generateBookHTML(title, author, pages, read);
+  const newDiv = generateBookHTML(title, author, pages, read, library.length-1);
   document.querySelector('main').appendChild(newDiv);
 });
 
@@ -66,22 +66,23 @@ function validInput(title, author, pages, read) {
   return true;
 }
 
-function generateBookHTML(title, author, pages, read) {
+function generateBookHTML(title, author, pages, read, libraryIdx) {
   const div = document.createElement('div');
   div.classList.add('book');
+  div.setAttribute('data-libraryIdx', `${libraryIdx}`);
 
   if (read) {
     div.innerHTML = `<h2 class="title">'${title}'</h2>
                    <span class="author">By ${author}</span>
                    <span class="pages">${pages} pages</span>
                    <label class="read-status">Read <input type="checkbox" checked></label>
-                   <button class="remove-btn">Remove</button>`;
+                   <button class="remove-btn" data-libraryIdx="${libraryIdx}">Remove</button>`;
   } else {
     div.innerHTML = `<h2 class="title">'${title}'</h2>
                    <span class="author">By ${author}</span>
                    <span class="pages">${pages} pages</span>
                    <label class="read-status">Read <input type="checkbox"></label>
-                   <button class="remove-btn">Remove</button>`;
+                   <button class="remove-btn" data-libraryIdx="${libraryIdx}">Remove</button>`;
   }
 
   return div;
