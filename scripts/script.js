@@ -86,6 +86,10 @@ function generateLibraryUI() {
       generateLibraryUI();
     });
 
+    newBook.querySelector('input').addEventListener('click', () => {
+      library[i].read = newBook.querySelector('input').checked;
+    });
+
     main.appendChild(newBook);
   }  
 }
